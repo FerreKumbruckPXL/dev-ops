@@ -30,6 +30,7 @@ jobs:
           github-token: ${{ secrets.NODEJS_TOKEN }}
     # The directory where your project is located, used as the base for making file paths in the report relative.
     # The path to the single code coverage report file you want to parse (e.g., 'build/reports/clover.xml').
+          coverage-file: ./coverage/clover.xml
     # Set to `true` to upload the generated coverage report as a workflow artifact. If omitted or left empty, this defaults to `true`. Set to `false` to disable artifact upload.
 
           upload-coverage-report: true # optional, default is true
