@@ -19,7 +19,7 @@ jobs:
         run: npm install
 
       - name: uitvoering van unit tests
-        run: npm test
+        run: npm test -- --coverage
 
       - name: Better Test Reports Action
   # You may pin to the exact commit or the version.
@@ -27,7 +27,7 @@ jobs:
         uses: mridang/action-test-reporter@v1.3.0
         with:
     # GitHub token used to authenticate API requests. Required for checking status checks and publishing releases. Use `secrets.GITHUB_TOKEN` or a PAT with elevated scopes if needed.
-          github-token: 'secrets.GITHUB_TOKEN'
+          github-token: ${{ secrets.NODEJS_TOKEN }}
     # The directory where your project is located, used as the base for making file paths in the report relative.
     # The path to the single code coverage report file you want to parse (e.g., 'build/reports/clover.xml').
 
